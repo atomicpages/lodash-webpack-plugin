@@ -2,7 +2,11 @@
   "name": "lodash-webpack-plugin",
   "version": "0.11.5",
   "description": "Smaller modular Lodash builds.",
-  "keywords": "lodash, modules, webpack-plugin",
+  "keywords": [
+    "lodash",
+    "modules",
+    "webpack-plugin"
+  ],
   "repository": "lodash/lodash-webpack-plugin",
   "license": "MIT",
   "main": "lib/index.js",
@@ -12,6 +16,7 @@
     "Mathias Bynens <mathias@qiwi.be>"
   ],
   "scripts": {
+    "postinstall": "npm run build",
     "build": "babel src --out-dir lib || true",
     "style": "eslint src",
     "prepublish": "npm run build",
@@ -45,6 +50,7 @@
     "webpack": "^2.0.0 || ^3.0.0 || ^4.0.0"
   },
   "files": [
-    "lib"
+    "lib",
+    "src"
   ]
 }
